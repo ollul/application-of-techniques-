@@ -116,7 +116,7 @@ public class Main {
                                     "Время не может быть отрицательным!!!");
                             System.out.println("Введите тип самолёта: ");
                             String typeOfAircraft = scan.next();
-                            System.out.println("Введите стоймость билета: ");
+                            System.out.println("Введите стоимость билета: ");
                             int ticketPrice = Integer.parseInt(scan.next());
                             if (ticketPrice < 0) throw new NegativeNumberException("ERROR! Стоимость билета не может" +
                                     "быть отрицательной!!!");
@@ -130,7 +130,7 @@ public class Main {
                         case 2:
                             System.out.println("*****Удаление рейса*****");
                             System.out.println(flights);
-                            System.out.println("Выбирите номер рейса, который нужно удалить: ");
+                            System.out.println("Выберите номер рейса, который нужно удалить: ");
                             int number = Integer.parseInt(scan.next());
                             if (number <= 0) throw new NegativeNumberException("ERROR! Номер рейса не может " +
                                     "быть равным нулю или отрицательным!!!");
@@ -168,7 +168,7 @@ public class Main {
                         case 4:
                             System.out.println("*****Удаление заявки (по заданной дате)*****");
                             System.out.println(requests);
-                            System.out.println("Выбирите дату: ");
+                            System.out.println("Выберите дату: ");
                             reqDay = Integer.parseInt(scan2.next());
                             reqMonth = Integer.parseInt(scan2.next());
                             reqYear = Integer.parseInt(scan2.next());
@@ -207,14 +207,14 @@ public class Main {
                             break;
                         case 6:
                             System.out.println("*****Список заявок (по заданным дате и времени вылета)*****");
-                            System.out.println("Выбирите дату вылета: ");
+                            System.out.println("Выберите дату вылета: ");
                             reqDay = Integer.parseInt(scan2.next());
                             reqMonth = Integer.parseInt(scan2.next());
                             reqYear = Integer.parseInt(scan2.next());
                             if (reqDay <= 0 || reqMonth <= 0 || reqYear <=0) throw new NegativeNumberException("ERROR! " +
                                     "Дата не может быть равной нулю или отрицательной!!!");
 
-                            System.out.println("Выбирите время вылета: ");
+                            System.out.println("Выберите время вылета: ");
                             reqHours = Integer.parseInt(scan2.next());
                             reqMinutes = Integer.parseInt(scan2.next());
                             if (reqHours < 0 || reqMinutes < 0) throw new NegativeNumberException("ERROR! " +
@@ -230,9 +230,9 @@ public class Main {
                             break;
                         case 7:
                             System.out.println("*****Список рейсов (по заданным пунктам отправления и назначения)*****");
-                            System.out.println("Выбирите пункт отправления: ");
+                            System.out.println("Выберите пункт отправления: ");
                             pointOfDeparture = scan.next();
-                            System.out.println("Выбирите пункт назначения: ");
+                            System.out.println("Выберите пункт назначения: ");
                             destination = scan.next();
 
                             for (int i = 0; i < flights.size(); i++) {
